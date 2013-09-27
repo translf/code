@@ -5290,7 +5290,7 @@ namespace SoukeyNetget
                     try
                     {
                         bool IsTaskClass = false;
-                        bool IsTaskName = false;
+                      //  bool IsTaskName = false;
 
                         TaskClass = tInfo.Substring(0, tInfo.IndexOf("/") );
                         TaskName = tInfo.Substring(tInfo.IndexOf("/") + 1, tInfo.Length - tInfo.IndexOf("/") - 1);
