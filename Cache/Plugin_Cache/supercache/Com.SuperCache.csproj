@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E9FE603-3928-4076-94F8-F5C1CE54344D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Com.SuperCache</RootNamespace>
+    <AssemblyName>Com.SuperCache</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;-CUSTOMTYPE </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Engine\CacheEngine.cs" />
+    <Compile Include="Engine\RawCache.cs" />
+    <Compile Include="Engine\Extensions.cs" />
+    <Compile Include="Engine\BaseCache.cs" />
+    <Compile Include="Engine\STSdbCache.cs" />
+    <Compile Include="JSON\Formatter.cs" />
+    <Compile Include="JSON\Getters.cs" />
+    <Compile Include="JSON\JSON.cs" />
+    <Compile Include="JSON\JsonParser.cs" />
+    <Compile Include="JSON\JsonSerializer.cs" />
+    <Compile Include="JSON\Reflection.cs" />
+    <Compile Include="JSON\SafeDictionary.cs" />
+    <Compile Include="Store\Database\IIndex.cs" />
+    <Compile Include="Store\Database\IndexRecordSet.cs" />
+    <Compile Include="Store\Database\Index\IndexPersistDataContainer.cs" />
+    <Compile Include="Store\Database\Index\IndexPersistDataContainerRaw.cs" />
+    <Compile Include="Store\Database\Index\IndexPersistOperationCollection.cs" />
+    <Compile Include="Store\Database\Index\IndexPersistOperationCollection.OperationsPersist.cs" />
+    <Compile Include="Store\Database\IStorageEngine.cs" />
+    <Compile Include="Store\Database\Locator.cs" />
+    <Compile Include="Store\Database\OperationCollection.cs" />
+    <Compile Include="Store\Database\Operations\IteratorOperations.cs" />
+    <Compile Include="Store\Database\Operations\OperationCode.cs" />
+    <Compile Include="Store\Database\Operations\OverallOperations.cs" />
+    <Compile Include="Store\Database\Operations\PointOperations.cs" />
+    <Compile Include="Store\Database\Operations\RangeOperations.cs" />
+    <Compile Include="Store\Database\SentinelPersistKey.cs" />
+    <Compile Include="Store\Database\StorageEngine.cs" />
+    <Compile Include="Store\Database\StructureDescriptor.cs" />
+    <Compile Include="Store\Database\StructureType.cs" />
+    <Compile Include="Store\Database\STSdb.cs" />
+    <Compile Include="Store\Database\XFile.cs" />
+    <Compile Include="Store\Database\XIndex.cs" />
+    <Compile Include="Store\Database\XIndex.Query.cs" />
+    <Compile Include="Store\Database\XIndexApply.cs" />
+    <Compile Include="Store\Database\XIndexWrapper.cs" />
+    <Compile Include="Store\Database\XStream.cs" />
+    <Compile Include="Store\Database\XStreamApply.cs" />
+    <Compile Include="Store\Data\CompareOption.cs" />
+    <Compile Include="Store\Data\Data.cs" />
+    <Compile Include="Store\Data\DataComparer.cs" />
+    <Compile Include="Store\Data\DataEqualityComparer.cs" />
+    <Compile Include="Store\Data\DataIndexerPersist.cs" />
+    <Compile Include="Store\Data\DataIndexerPersistRaw.cs" />
+    <Compile Include="Store\Data\DataPersist.cs" />
+    <Compile Include="Store\Data\DataPersist2.cs" />
+    <Compile Include="Store\Data\DataToObjectsTransformer.cs" />
+    <Compile Include="Store\Data\DataToStringTransformer.cs" />
+    <Compile Include="Store\Data\DataTransformer.cs" />
+    <Compile Include="Store\Data\DataType.cs" />
+    <Compile Include="Store\Data\DataTypeUtils.cs" />
+    <Compile Include="Store\Data\FlowTransformer.cs" />
+    <Compile Include="Store\Data\IData.cs" />
+    <Compile Include="Store\Data\IDataTransformer.cs" />
+    <Compile Include="Store\General\Buffers\BitUtils.cs" />
+    <Compile Include="Store\General\Buffers\HashCodeBuilder.cs" />
+    <Compile Include="Store\General\Collections\Cache.cs" />
+    <Compile Include="Store\General\Collections\IOrderedSet.cs" />
+    <Compile Include="Store\General\Collections\LimitedQueue.cs" />
+    <Compile Include="Store\General\Collections\OrderedSet.cs" />
+    <Compile Include="Store\General\Communication\ClientConnection.cs" />
+    <Compile Include="Store\General\Communication\Packet.cs" />
+    <Compile Include="Store\General\Communication\ServerConnection.cs" />
+    <Compile Include="Store\General\Communication\TcpServer.cs" />
+    <Compile Include="Store\General\Comparers\BigEndianByteArrayComparer.cs" />
+    <Compile Include="Store\General\Comparers\BigEndianByteArrayEqualityComparer.cs" />
+    <Compile Include="Store\General\Comparers\ByteOrder.cs" />
+    <Compile Include="Store\General\Comparers\CommonArray.cs" />
+    <Compile Include="Store\General\Comparers\ComparerInvertor.cs" />
+    <Compile Include="Store\General\Comparers\KeyValuePairComparer.cs" />
+    <Compile Include="Store\General\Comparers\LittleEndianByteArrayComparer.cs" />
+    <Compile Include="Store\General\Comparers\LittleEndianByteArrayEqualityComparer.cs" />
+    <Compile Include="Store\General\Comparers\SortOrder.cs" />
+    <Compile Include="Store\General\Compression\CountCompression.cs" />
+    <Compile Include="Store\General\Compression\DeltaCompression.cs" />
+    <Compile Include="Store\General\Extensions\ArrayExtensions.cs" />
+    <Compile Include="Store\General\Extensions\ByteArrayExtensions.cs" />
+    <Compile Include="Store\General\Extensions\ExpressionExtensions.cs" />
+    <Compile Include="Store\General\Extensions\IEnumerableExtensions.cs" />
+    <Compile Include="Store\General\Extensions\IListExtensions.cs" />
+    <Compile Include="Store\General\Extensions\Int32ArrayExtensions.cs" />
+    <Compile Include="Store\General\Extensions\RandomExtensions.cs" />
+    <Compile Include="Store\General\Extensions\SortedSetExtensions.cs" />
+    <Compile Include="Store\General\Extensions\StopwatchExtensions.cs" />
+    <Compile Include="Store\General\Extensions\StringExtensions.cs" />
+    <Compile Include="Store\General\Extensions\TypeExtensions.cs" />
+    <Compile Include="Store\General\IO\IOUtils.cs" />
+    <Compile Include="Store\General\IO\OptimizedFileStream.cs" />
+    <Compile Include="Store\General\Mathematics\MathUtils.cs" />
+    <Compile Include="Store\General\Patches\ListPatch.cs" />
+    <Compile Include="Store\General\Persist\BooleanIndexerPersist.cs" />
+    <Compile Include="Store\General\Persist\ByteArrayIndexerPersist.cs" />
+    <Compile Include="Store\General\Persist\DateTimeIndexerPersist.cs" />
+    <Compile Include="Store\General\Persist\EnumIndexerPersist.cs" />
+    <Compile Include="Store\General\Persist\FloatIndexerPersist.cs" />
+    <Compile Include="Store\General\Persist\IIndexerPersist.cs" />
+    <Compile Include="Store\General\Persist\IntegerIndexerPersist.cs" />
+    <Compile Include="Store\General\Persist\IPersist.cs" />
+    <Compile Include="Store\General\Persist\StringIndexerPersist.cs" />
+    <Compile Include="Store\General\Threading\Countdown.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Store\Remote\Message.cs" />
+    <Compile Include="Store\Remote\StorageEngineClient.cs" />
+    <Compile Include="Store\Remote\StorageEngineServer.cs" />
+    <Compile Include="Store\Remote\XIndexRemote.cs" />
+    <Compile Include="Store\Storage\AtomicHeader.cs" />
+    <Compile Include="Store\Storage\Heap.cs" />
+    <Compile Include="Store\Storage\Pointer.cs" />
+    <Compile Include="Store\Storage\Ptr.cs" />
+    <Compile Include="Store\Storage\Space.cs" />
+    <Compile Include="Store\WaterfallTree\DataDescriptor.cs" />
+    <Compile Include="Store\WaterfallTree\IApply.cs" />
+    <Compile Include="Store\WaterfallTree\IDataContainer.cs" />
+    <Compile Include="Store\WaterfallTree\IHeap.cs" />
+    <Compile Include="Store\WaterfallTree\ILocator.cs" />
+    <Compile Include="Store\WaterfallTree\IOperation.cs" />
+    <Compile Include="Store\WaterfallTree\IOperationCollection.cs" />
+    <Compile Include="Store\WaterfallTree\IPersistDataContainer.cs" />
+    <Compile Include="Store\WaterfallTree\IPersistOperationCollection.cs" />
+    <Compile Include="Store\WaterfallTree\KeyDescriptor.cs" />
+    <Compile Include="Store\WaterfallTree\RecordDescriptor.cs" />
+    <Compile Include="Store\WaterfallTree\WTree.Branch.cs" />
+    <Compile Include="Store\WaterfallTree\Wtree.Branch.Fall.cs" />
+    <Compile Include="Store\WaterfallTree\WTree.BranchCache.cs" />
+    <Compile Include="Store\WaterfallTree\WTree.BranchCollection.cs" />
+    <Compile Include="Store\WaterfallTree\WTree.BranchesOptimizator.cs" />
+    <Compile Include="Store\WaterfallTree\WTree.cs" />
+    <Compile Include="Store\WaterfallTree\WTree.FullKey.cs" />
+    <Compile Include="Store\WaterfallTree\WTree.Header.cs" />
+    <Compile Include="Store\WaterfallTree\WTree.InternalNode.cs" />
+    <Compile Include="Store\WaterfallTree\WTree.InternalNode.Maintenance.cs" />
+    <Compile Include="Store\WaterfallTree\WTree.LeafNode.cs" />
+    <Compile Include="Store\WaterfallTree\WTree.Node.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
