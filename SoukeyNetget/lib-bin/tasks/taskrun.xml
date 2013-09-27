@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Tasks>
+  <Task>
+    <TaskID>130247349786834979</TaskID>
+    <TaskName>baidu</TaskName>
+    <TaskState>1016</TaskState>
+    <TaskType>1051</TaskType>
+    <RunType>1041</RunType>
+    <ExportFile>
+    </ExportFile>
+    <tempFile>G:\迅雷下载\Soukey源码-2012-3-1-2005版\Soukey源码\SoukeyNetget\bin\Debug\data\baidu-130247349786834979.xml</tempFile>
+    <StartDate>2013/9/27 13:56:18</StartDate>
+    <EndDate>
+    </EndDate>
+    <ThreadCount>3</ThreadCount>
+    <UrlCount>1</UrlCount>
+    <TrueUrlCount>1</TrueUrlCount>
+    <GatheredUrlCount>1</GatheredUrlCount>
+    <GatheredTrueUrlCount>1</GatheredTrueUrlCount>
+    <ErrUrlCount>0</ErrUrlCount>
+    <TrueErrUrlCount>0</TrueErrUrlCount>
+    <IsLogin>False</IsLogin>
+    <PublishType>1060</PublishType>
+  </Task>
+  <Task>
+    <TaskID>130247350424901475</TaskID>
+    <TaskName>baidu</TaskName>
+    <TaskState>1016</TaskState>
+    <TaskType>1051</TaskType>
+    <RunType>1042</RunType>
+    <ExportFile>G:\迅雷下载\Soukey源码-2012-3-1-2005版\Soukey源码\SoukeyNetget\bin\Debug\1.txt</ExportFile>
+    <tempFile>G:\迅雷下载\Soukey源码-2012-3-1-2005版\Soukey源码\SoukeyNetget\bin\Debug\data\baidu-130247350424901475.xml</tempFile>
+    <StartDate>2013/9/27 13:57:22</StartDate>
+    <EndDate>
+    </EndDate>
+    <ThreadCount>3</ThreadCount>
+    <UrlCount>1</UrlCount>
+    <TrueUrlCount>1</TrueUrlCount>
+    <GatheredUrlCount>1</GatheredUrlCount>
+    <GatheredTrueUrlCount>1</GatheredTrueUrlCount>
+    <ErrUrlCount>0</ErrUrlCount>
+    <TrueErrUrlCount>0</TrueErrUrlCount>
+    <IsLogin>False</IsLogin>
+    <PublishType>1063</PublishType>
+  </Task>
+</Tasks>

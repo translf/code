@@ -10,7 +10,7 @@ using System.Data ;
 ///开发计划：下一版字典部分要强化
 ///说明：
 ///版本：01.10.00
-///修订：无
+///修订：无 5
 namespace SoukeyNetget
 {
     class cDict
